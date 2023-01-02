@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  apache:
+    image: httpd:latest
+    container_name: my-apache-app
+    ports:
+    - '80:8080'
+    volumes:
+    - ./website:/usr/local/apache2/htdocs
+
+echo "<html><h1>Site Funcionando</h1></html> " > /var/www/html/index.html
